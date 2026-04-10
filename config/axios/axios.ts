@@ -10,7 +10,7 @@ export const httpRequest = axios.create({
   },
 });
 
-// ✅ Response Interceptor
+//* Response Interceptor
 httpRequest.interceptors.response.use(
   (response) => response,
   async (error) => {
