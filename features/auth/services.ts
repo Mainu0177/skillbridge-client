@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
   
 export const getProfile = async ():Promise<{user:{data:any},cookies:string} | null> => {
- const cookieStore = await cookies();
+  const cookieStore = await cookies();
   const res = await fetch(`${process.env.API_URL}/api/auth/me`, {
     headers: {
       cookie: cookieStore.toString(),
@@ -15,19 +15,19 @@ export const getProfile = async ():Promise<{user:{data:any},cookies:string} | nu
   if (!res.ok) return null;
   const user = await res.json()
 
- 
+
   return {user,cookies:cookieStore.toString()}
 };
 export const getCookies = async ():Promise<string> => {
- const cookieStore = await cookies();
+  const cookieStore = await cookies();
 
 
- 
+
   return cookieStore.toString()
 };
 export const logoutUser = async ()=>{
   
- const cookieStore = await cookies();
+  const cookieStore = await cookies();
 
     try {
         const res = await fetch(`${process.env.API_URL}/api/auth/logout`,{
@@ -49,7 +49,7 @@ export const updateAvatar = async (formData: FormData) => {
   
     const cookieString = await getCookies();
 
-    const response = await fetch(`${process.env.API_URL}/api/auth/profile/change-avater`, {
+    const response = await fetch(`${process.env.API_URL}/api/auth/profile/change-avatar`, {
       method: "PUT",
       headers: {
         cookie: cookieString,

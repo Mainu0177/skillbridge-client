@@ -27,11 +27,11 @@ export const useAuthHandlers = () => {
   // --- Sign In ---
   const signIn = async (data: signInPayloadType) => {
     // const userData =  await signinMutation.mutateAsync(data);
-   const res = fetch(`/api/login`, {
+    const res = fetch(`/api/login`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(data),
-  credentials: "include", // 🔥 REQUIRED
+  credentials: "include", //* REQUIRED
 });
 const userData = (await res).json()
 
@@ -41,50 +41,44 @@ return userData
 
   // --- Sign Up ---
   const signUp = async (data: signUpPayloadType) => {
- 
+
   
     await signupMutation.mutateAsync(data);
- 
-   
-   
+
   };
   // --- Get user profile ---
   const getCurrentUser = async () => {
- 
+
   setStatus("get-profile")
-   const userData = await getProfile();
+    const userData = await getProfile();
 
     
 
-   if(!userData){
-     setStatus("none")
-     setUserData({})
-   }
-   setUserData(userData?.user.data)
-   
+    if(!userData){
+      setStatus("none")
+      setUserData({})
+    }
+    setUserData(userData?.user.data)
   };
 
   // --- Get user profile ---
   const logoutCurrentUser = async () => {
- 
-  setStatus("logout-user")
-     const res  = await logoutUser();
 
-   
-  
-   
-   
+  setStatus("logout-user")
+      const res  = await logoutUser();
+
+
   };
 
 
 useEffect(()=>{
- getCurrentUser()
+  getCurrentUser()
 },[])
 useEffect(()=>{
     if(signupMutation.isSuccess){
       router.push("/sign-in")
-     }
- 
+    }
+
 },[signupMutation.isSuccess])
 
   return {

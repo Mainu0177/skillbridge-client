@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { StudentBooking } from "@/features/tutor/types";
 import { BookingCard } from "./BookingCard";
-import { EmptyState } from "@/features/student-dashboard/components/EmptyState";
+import { EmptyState } from "@/features/studentDashboard/components/EmptyState";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Filter, SortAsc, SortDesc } from "lucide-react";

@@ -86,7 +86,7 @@ export default function BookingClientView({ booking }: { booking: any }) {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
                     <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4">
                         <div className="w-24 h-24 rounded-[32px] ring-8 ring-zinc-50 dark:ring-zinc-800/50 overflow-hidden shadow-inner bg-zinc-100">
-                            <img src={tutor?.user.profileAvater!} className="w-full h-full object-cover" alt="Tutor" />
+                            <img src={tutor?.user.profileAvatar!} className="w-full h-full object-cover" alt="Tutor" />
                         </div>
                         <div>
                             <p className="text-[10px] font-black text-indigo-500 uppercase tracking-widest mb-1">Expert Tutor</p>
@@ -104,7 +104,7 @@ export default function BookingClientView({ booking }: { booking: any }) {
 
                     <div className="flex flex-col items-center md:items-end text-center md:text-right gap-4">
                         <div className="w-24 h-24 rounded-[32px] ring-8 ring-zinc-50 dark:ring-zinc-800/50 overflow-hidden shadow-inner bg-zinc-100">
-                            <img src={student?.profileAvater} className="w-full h-full object-cover" alt="Student" />
+                            <img src={student?.profileAvatar} className="w-full h-full object-cover" alt="Student" />
                         </div>
                         <div>
                             <p className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-1">Verified Student</p>

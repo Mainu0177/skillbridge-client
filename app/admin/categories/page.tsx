@@ -20,7 +20,7 @@ import { toast } from "sonner";
 import { httpRequest } from "@/config/axios/axios";
 import { cn } from "@/lib/utils";
 import CategoryCard from "@/features/admin/components/CategoryCard";
-import { EmptyState } from "@/features/student-dashboard/components/EmptyState";
+import { EmptyState } from "@/features/studentDashboard/components/EmptyState";
 import { createCategoryByAdmin, deleteCategoryByAdmin, updateCategoryByAdmin } from "@/features/admin/services";
 
 const CategoryManager = () => {
@@ -243,7 +243,7 @@ const CategoryManager = () => {
                 <AlertCircle size={20} /> Confirm Deletion
                 </DialogTitle>
                 <DialogDescription className="pt-2">
-                Are you sure you want to delete <span className="font-bold text-zinc-900 dark:text-zinc-100">"{editingCategory?.name}"</span>? 
+                Are you sure you want to delete <span className="font-bold text-zinc-900 dark:text-zinc-100">{editingCategory?.name}</span>? 
                 This action cannot be undone and will remove all associated subject tags.
                 </DialogDescription>
             </DialogHeader>

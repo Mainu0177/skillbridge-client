@@ -10,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { changePassword } from "@/features/student-dashboard/services";
+import { changePassword } from "@/features/studentDashboard/services";
 
 export default function ChangePasswordPage() {
   const [showPass, setShowPass] = useState(false);

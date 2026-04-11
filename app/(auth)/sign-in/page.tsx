@@ -111,14 +111,8 @@ export default function SignInPage() {
                     Create a free account
                 </Link>
                 </p>
-            </div>
-
-        
-            <SignInForm />
-
-            
-
-            
+            </div>  
+                <SignInForm />
             </div>
         </div>
         </div>

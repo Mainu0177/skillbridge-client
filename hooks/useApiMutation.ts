@@ -12,7 +12,7 @@ interface MutationConfig {
   successMessage?: string;
 }
 
-// এখানে TContext = unknown যোগ করা হয়েছে যা টাইপ এরর দূর করবে
+//* এখানে TContext = unknown যোগ করা হয়েছে যা টাইপ এরর দূর করবে
 export function useApiMutation<TData = any, TVariables = any, TContext = unknown>(
   config: MutationConfig,
   options?: UseMutationOptions<TData, Error, TVariables, TContext> | any
@@ -22,7 +22,7 @@ export function useApiMutation<TData = any, TVariables = any, TContext = unknown
 
   return useMutation<TData, Error, TVariables, TContext>({
     mutationFn: async (payload) => {
-       await new Promise((reslove)=> setTimeout(reslove,1000))
+        await new Promise((resolve)=> setTimeout(resolve,1000))
 
       const response = await httpRequest({
         url: endpoint,

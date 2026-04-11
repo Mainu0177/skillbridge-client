@@ -65,9 +65,9 @@ console.log(res);
   };
 
   return (
-   
+
 <div>
-     <button 
+    <button 
             onClick={() => setIsModalOpen(true)}
             className="group flex items-center gap-2 bg-zinc-900 dark:bg-zinc-50 text-white dark:text-black px-5 py-3 rounded-full hover:opacity-90 transition-all active:scale-95"
           >
@@ -146,7 +146,7 @@ console.log(res);
 
               <div className="mt-8">
                 <Button onClick={validateAndAdd} className="w-full h-14 bg-zinc-900 dark:bg-zinc-50 text-white dark:text-black rounded-2xl font-bold transition-all shadow-lg active:scale-[0.97]">
-                 { addAvailabilityMutation.isPending ? "Creating Slot" : "Create Slot"} {addAvailabilityMutation.isPending && <Loader2 className="animate-spin ml-2"/>}
+                  { addAvailabilityMutation.isPending ? "Creating Slot" : "Create Slot"} {addAvailabilityMutation.isPending && <Loader2 className="animate-spin ml-2"/>}
                 </Button>
               </div>
             </motion.div>

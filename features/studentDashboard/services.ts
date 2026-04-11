@@ -103,7 +103,7 @@ export const createBooking = async (data: any) => {
     throw error;
   }
 };
-export const cencelBooking = async (data: any) => {
+export const cancelBooking = async (data: any) => {
   try {
     const token = await getToken();
     const response = await fetch(`${process.env.API_URL}/api/booking/${data.bookingId}/cancel-booking`, {

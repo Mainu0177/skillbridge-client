@@ -6,7 +6,7 @@ const page =async ({params}:{params:{id:string}}) => {
 
 
     const userId = "user_123";
-    const userName = "Habib";
+    const userName = "Mainuddin Khan";
 
     if (!id) return <div>Loading...</div>;
 return <App/>

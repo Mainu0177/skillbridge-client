@@ -22,9 +22,9 @@ const TutorCard = ({ tutor }: { tutor: TutorListItem }) => {
       
         <div className="flex justify-between items-start mb-8">
           <div className="flex flex-col gap-2">
-             <div className="h-20 w-20 rounded-[30px] bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center font-black text-indigo-600 text-3xl uppercase shadow-inner overflow-hidden border-4 border-white dark:border-zinc-800 ring-1 ring-zinc-100 dark:ring-zinc-800">
-              {tutor.profileAvater ? (
-                <img src={tutor.profileAvater} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt={tutor.name} />
+            <div className="h-20 w-20 rounded-[30px] bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center font-black text-indigo-600 text-3xl uppercase shadow-inner overflow-hidden border-4 border-white dark:border-zinc-800 ring-1 ring-zinc-100 dark:ring-zinc-800">
+              {tutor.profileAvatar ? (
+                <img src={tutor.profileAvatar} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt={tutor.name} />
               ) : (
                 tutor.name.charAt(0)
               )}
@@ -41,13 +41,13 @@ const TutorCard = ({ tutor }: { tutor: TutorListItem }) => {
         </div>
 
         <div className="flex items-center gap-3 mb-5">
-           <div className={cn(
-             "flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-black tracking-tight",
-             tutor.avgRating > 0 ? "bg-amber-400/10 text-amber-600" : "bg-zinc-100 text-zinc-400"
-           )}>
-             <Star className={cn("w-3.5 h-3.5", tutor.avgRating > 0 && "fill-amber-500")} />
-             {tutor.avgRating > 0 ? tutor.avgRating.toFixed(1) : "NEW"}
-           </div>
+            <div className={cn(
+              "flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-black tracking-tight",
+              tutor.avgRating > 0 ? "bg-amber-400/10 text-amber-600" : "bg-zinc-100 text-zinc-400"
+            )}>
+              <Star className={cn("w-3.5 h-3.5", tutor.avgRating > 0 && "fill-amber-500")} />
+              {tutor.avgRating > 0 ? tutor.avgRating.toFixed(1) : "NEW"}
+            </div>
         
         </div>
 

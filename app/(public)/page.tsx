@@ -2,9 +2,9 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Categories from "@/features/landing-page/Categories";
-import FeaturedTutors from "@/features/landing-page/FeaturedTutors";
-import DashboardKPIs from "@/features/landing-page/KpisReport";
+import Categories from "@/features/landingPage/Categories";
+import FeaturedTutors from "@/features/landingPage/FeaturedTutors";
+import DashboardKPIs from "@/features/landingPage/KpisReport";
 import { motion } from "framer-motion";
 import {
     BookOpen,

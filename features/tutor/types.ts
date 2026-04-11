@@ -11,7 +11,7 @@ export type TutorListItem = {
   name: string;
   avgRating:number
   email: string;
-  profileAvater: string | null;
+  profileAvatar: string | null;
   role: string;
     location: string;
   phoneNumber: number;
@@ -33,7 +33,7 @@ export type TutorListItem = {
 export type tutorProfileType = {
   name: string;
   email: string;
-  profileAvater: string
+  profileAvatar: string
   location: string;
   phoneNumber: string;
   tutorProfile: {
@@ -64,7 +64,7 @@ export type StudentBooking = {
   createdAt: string;     // ISO string
   student:{
     name:string;
-    profileAvater:string
+    profileAvatar:string
   }
   availability: {
     date: string;        // ISO string
@@ -80,7 +80,7 @@ export type StudentBooking = {
     user: {
       id: string;
       name: string;
-      profileAvater: string | null;
+      profileAvatar: string | null;
     };
   };
 

@@ -1,7 +1,7 @@
 export type updateProfilePayload = {
     name?:string;
     email?:string;
-    profileAvater?:string;
+    profileAvatar?:string;
     location?:string;
     phoneNumber?:string;
   

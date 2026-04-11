@@ -17,22 +17,22 @@ import { cn } from "@/lib/utils";
 import { useMutation } from '@tanstack/react-query';
 import { httpRequest } from '@/config/axios/axios';
 import axios from 'axios';
-import { cencelBooking } from '../services';
+import { cancelBooking } from '../services';
 
 export const BookingCard = ({ booking }: { booking: any }) => {
   const { tutor, dateTime, status, id } = booking;
   const tutorUser = tutor.user;
- 
-   const updateCategoryMutation = useMutation({
+
+  const updateCategoryMutation = useMutation({
     mutationFn:(data:{
       body:{
         status:string
       }
       bookingId:string
-    })  => cencelBooking(data),
+    })  => cancelBooking(data),
     onSuccess: () => {
-     
-       toast.success("Booking cancelled", { id });
+
+        toast.success("Booking cancelled", { id });
     
     },
     onError: (e) => {
@@ -117,8 +117,8 @@ export const BookingCard = ({ booking }: { booking: any }) => {
         <div className="relative shrink-0">
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 p-[2px] shadow-lg shadow-blue-500/20">
             <div className="w-full h-full rounded-[14px] bg-white dark:bg-zinc-950 overflow-hidden">
-              {tutorUser.profileAvater ? (
-                <img src={tutorUser.profileAvater} alt="" className="w-full h-full object-cover" />
+              {tutorUser.profileAvatar ? (
+                <img src={tutorUser.profileAvatar} alt="" className="w-full h-full object-cover" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center font-bold text-zinc-400">{tutorUser.name[0]}</div>
               )}

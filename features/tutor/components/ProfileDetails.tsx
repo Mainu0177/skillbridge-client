@@ -48,7 +48,7 @@ export default function TutorProfilePage({ tutor }: { tutor: tutorProfileType })
   // Preview state for the image only (local blob URL)
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [localImagePreview, setLocalImagePreview] = useState<string | null>(null);
-  const [profileAvater, setProfileAvater] = useState<string | null>(tutor.profileAvater);
+  const [profileAvatar, setProfileAvatar] = useState<string | null>(tutor.profileAvatar);
 
   // 2. Check if anything (text or image) has changed
   const isDirty = useMemo(() => {
@@ -68,7 +68,7 @@ export default function TutorProfilePage({ tutor }: { tutor: tutorProfileType })
       onSuccess: (res) => {
     console.log(res);
     
-      setProfileAvater(res?.data?.profileAvater)
+      setProfileAvatar(res?.data?.profileAvatar)
       setLocalImagePreview(null);
       toast.success("Photo uploaded successfully!");
       refetchQueries("user-profile")
@@ -80,7 +80,7 @@ export default function TutorProfilePage({ tutor }: { tutor: tutorProfileType })
   // 3. Unified Save Handler
   const handlePushChanges = async () => {
     try {
- 
+
 
 
       const { name, location, phoneNumber, ...others } = draft;
@@ -158,7 +158,7 @@ const confirmUpload = async () => {
                   <div className="relative mb-6">
                     <div className="w-32 h-32 md:w-40 md:h-40 rounded-[48px] overflow-hidden ring-8 ring-zinc-50 dark:ring-zinc-800 shadow-inner">
                       {/* Show local preview if selected, otherwise saved avatar */}
-                      <img src={profileAvater || ""} alt="Avatar" className="w-full h-full object-cover" />
+                      <img src={profileAvatar || ""} alt="Avatar" className="w-full h-full object-cover" />
                     </div>
                     <button
                       onClick={() => fileInputRef.current?.click()}

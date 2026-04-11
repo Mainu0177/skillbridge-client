@@ -6,8 +6,8 @@ import Link from 'next/link'
 const LatestReviews = async() => {
 
     await new Promise((res)=> setTimeout(res,2000))
-  return (
-       <Card className="lg:col-span-3 shadow-sm border-zinc-200/60 dark:border-zinc-800/60">
+  return (+
+        <Card className="lg:col-span-3 shadow-sm border-zinc-200/60 dark:border-zinc-800/60">
           <CardHeader>
             <CardTitle className="text-lg font-semibold flex items-center gap-2">
               <Star className="h-5 w-5 text-amber-500" /> Latest Review
@@ -23,7 +23,7 @@ const LatestReviews = async() => {
                   ))}
                 </div>
               </div>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 italic">"Great teacher! Explained state management perfectly."</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 italic">Great teacher! Explained state management perfectly.</p>
             </div>
             <Button variant="outline" className="w-full group" asChild>
               <Link href="/tutors">

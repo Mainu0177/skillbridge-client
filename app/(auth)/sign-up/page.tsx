@@ -32,7 +32,7 @@ export default function SignUpPage() {
             <div className="space-y-4">
                 <Quote className="h-10 w-10 text-indigo-500 opacity-50" />
                 <h2 className="text-4xl font-black text-white leading-tight lg:text-5xl">
-                "This platform changed how I approach learning. I found a mentor in minutes."
+                    This platform changed how I approach learning. I found a mentor in minutes.
                 </h2>
                 <div className="flex items-center gap-4">
                 <div className="h-12 w-12 rounded-full bg-zinc-800 border border-zinc-700 overflow-hidden">

@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const LogoutButton = () => {
   const [loading, setLoading] = useState(false);
- const {refetchQueries} = useRefetchQueries()
+  const {refetchQueries} = useRefetchQueries()
   const router = useRouter()
 const handleLogout = async () => {
   try {
