@@ -1,7 +1,7 @@
 
 
 import { getProfile } from "@/features/auth/services";
-import DashboardContent from "@/features/student-dashboard/components/DashboardContent";
+import DashboardContent from "@/features/studentDashboard/components/DashboardContent";
 
 
 export default async function StudentOverview() {

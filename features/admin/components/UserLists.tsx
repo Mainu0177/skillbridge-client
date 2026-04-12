@@ -6,18 +6,18 @@ import UserCard from "./UserCard";
 
 
 const UserLists = async() => {
- 
+
  const response =  await getAllUsersByAdmin();
-  
 
 
-  return (
-    <AnimatePresence mode="popLayout">
-                {response?.data?.map((user:any) => (
-         <UserCard user={user} key={user.id}/>
-                ))}
-              </AnimatePresence>
-  )
+
+    return (
+    <AnimatePresence mode="popLayout">
+        {response?.data?.map((user:any) => (
+        <UserCard user={user} key={user.id}/>
+    ))}
+    </AnimatePresence>
+    )
 }
 
 export default UserLists 

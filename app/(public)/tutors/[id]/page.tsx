@@ -1,5 +1,5 @@
 import { getProfile } from '@/features/auth/services';
-import PublicTutorProfile from '@/features/public-pages/TutorProfileDetails'
+import PublicTutorProfile from '@/features/publicPage/TutorProfileDetails'
 import React from 'react'
 
 const page =async ({params}:{params:{id:string}}) => {

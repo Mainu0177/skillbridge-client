@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { getToken } from "../student-dashboard/services";
+import { getToken } from "../studentDashboard/services";
 
 const API_URL = process.env.API_URL;
 
@@ -65,7 +65,6 @@ export const updateUserStatus = async (payload: { userId: string; body: { status
     );
 
     const result = await res.json();
-   
     
     // Revalidate the users list so the admin sees the status change immediately
     revalidatePath("/admin/dashboard/users");
@@ -118,7 +117,7 @@ export const getLatestBooking = async () => {
       const errorData = await res.json();
       throw new Error(errorData.message || "Failed to fetch bookings");
     }
-       const result = await res.json()
+        const result = await res.json()
     return result?.data.slice(0,3)
   } catch (error) {
     console.error("getAllBookingsByAdmin error:", error);
@@ -135,7 +134,7 @@ export const getDashboardOverviewStars = async () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        cookie: cookieString, // Changed from Authorization to cookie
+        cookie: cookieString, //* Changed from Authorization to cookie
       },
       credentials:"include",
       cache:"default"
@@ -145,7 +144,7 @@ export const getDashboardOverviewStars = async () => {
       const errorData = await res.json();
       throw new Error(errorData.message || "Failed to fetch bookings");
     }
-       const result = await res.json()
+      const result = await res.json()
     return result
   } catch (error) {
     console.error("getAllBookingsByAdmin error:", error);

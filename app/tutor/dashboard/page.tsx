@@ -111,7 +111,7 @@ export default async function TutorDashboard() {
             <div className="flex items-center gap-3">
             <div className="relative">
                 <Avatar className="h-12 w-12 rounded-xl border-2 border-white dark:border-zinc-800 shadow-sm">
-                <AvatarImage src={session.student.profileAvater} alt={session.student.name} className="object-cover" />
+                <AvatarImage src={session.student.profileAvatar} alt={session.student.name} className="object-cover" />
                 <AvatarFallback className="bg-indigo-50 text-indigo-600 font-bold">
                     {session.student.name.charAt(0)}
                 </AvatarFallback>

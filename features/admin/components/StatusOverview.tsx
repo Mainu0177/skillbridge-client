@@ -14,7 +14,7 @@ const STATS = [
   { label: "Booking Rate", value:data?.bookingRate, trend: "+2.1%", icon: Activity, color: "text-rose-600" },
 ];
   return (
-     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {STATS.map((stat, i) => {
               const Icon:any = stat.icon;
           return <div
@@ -23,7 +23,7 @@ const STATS = [
           >
             <div className="flex justify-between items-start mb-4">
               <div className={cn("p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 transition-colors group-hover:bg-zinc-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black", stat.color)}>
-               <Icon size={18}/>
+                <Icon size={18}/>
               </div>
               <div className="flex items-center gap-1 text-[10px] font-bold text-emerald-600">
                 {stat.trend} <ArrowUpRight size={10} />

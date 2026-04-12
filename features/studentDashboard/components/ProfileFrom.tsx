@@ -36,10 +36,10 @@ interface UserProps {
   userData: {
     name: string;
     email: string;
-    profileAvater: string;
+    profileAvatar: string;
     phoneNumber?: string;
     location?: string;
- 
+
   };
 }
 
@@ -52,13 +52,13 @@ export default function StudentProfileForm({ userData }: UserProps) {
     name: userData?.name || "",
     phoneNumber: userData?.phoneNumber || "",
     location: userData?.location || "",
-   
+
   });
 
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [tempPreview, setTempPreview] = useState<string | null>(null);
-  const [profileAvatar, setProfileAvater] = useState<string | null>(userData.profileAvater);
+  const [profileAvatar, setProfileAvatar] = useState<string | null>(userData.profileAvatar);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const profileMutation = useMutation({
@@ -73,7 +73,7 @@ export default function StudentProfileForm({ userData }: UserProps) {
   const avatarMutation = useMutation({
     mutationFn: updateAvatar,
     onSuccess: (res) => {
-      setProfileAvater(res?.data?.profileAvater);
+      setProfileAvatar(res?.data?.profileAvatar);
       setIsModalOpen(false);
       setTempPreview(null);
       toast.success(res.message);
@@ -102,7 +102,7 @@ export default function StudentProfileForm({ userData }: UserProps) {
     reader.readAsDataURL(file);
   };
 
-  const handleAvaterUpload = async () => {
+  const handleAvatarUpload = async () => {
     if (!selectedFile) return;
     const formData = new FormData();
     formData.append("file", selectedFile, `${userData.name}-profileAvatar`);
@@ -233,7 +233,6 @@ export default function StudentProfileForm({ userData }: UserProps) {
                     </div>
                   </div>
 
-                 
                 </section>
               </div>
             </Card>
@@ -257,7 +256,7 @@ export default function StudentProfileForm({ userData }: UserProps) {
             <Button variant="ghost" className="rounded-xl md:rounded-2xl font-bold h-10 md:h-12 text-xs md:text-base" onClick={() => setIsModalOpen(false)} disabled={avatarMutation.isPending}>
               Cancel
             </Button>
-            <Button className="rounded-xl md:rounded-2xl font-black bg-indigo-600 text-white h-10 md:h-12 text-xs md:text-base" onClick={handleAvaterUpload} disabled={avatarMutation.isPending}>
+            <Button className="rounded-xl md:rounded-2xl font-black bg-indigo-600 text-white h-10 md:h-12 text-xs md:text-base" onClick={handleAvatarUpload} disabled={avatarMutation.isPending}>
               {avatarMutation.isPending ? <Loader2 className="animate-spin" /> : "Confirm"}
             </Button>
           </DialogFooter>

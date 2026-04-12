@@ -1,5 +1,5 @@
-import BookingClientView from "@/features/student-dashboard/components/booking-client-view";
-import { getBookingDetails } from "@/features/student-dashboard/services";
+import BookingClientView from "@/features/studentDashboard/components/booking-client-view";
+import { getBookingDetails } from "@/features/studentDashboard/services";
 
 
 export default async function BookingDetailPage({ params }: { params: { id: string } }) {

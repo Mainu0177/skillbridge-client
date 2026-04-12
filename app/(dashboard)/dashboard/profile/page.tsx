@@ -1,7 +1,7 @@
 
 import { Skeleton } from "@/components/ui/skeleton";
 import { getProfile } from "@/features/auth/services";
-import StudentProfileFrom from "@/features/student-dashboard/components/ProfileFrom";
+import StudentProfileFrom from "@/features/studentDashboard/components/ProfileFrom";
 
 export default async function StudentProfilePage() {
 const userData = await getProfile();

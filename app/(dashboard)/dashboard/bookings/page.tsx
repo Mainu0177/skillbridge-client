@@ -1,5 +1,5 @@
-import StudentBookings from "@/features/student-dashboard/components/StudentBookings";
-import { getStudentBookings } from "@/features/student-dashboard/services";
+import StudentBookings from "@/features/studentDashboard/components/StudentBookings";
+import { getStudentBookings } from "@/features/studentDashboard/services";
 
 
 export default async function StudentBookingsPage() {

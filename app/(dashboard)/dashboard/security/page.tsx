@@ -1,4 +1,4 @@
-import ChangePasswordPage from '@/features/student-dashboard/components/ChangePassword'
+import ChangePasswordPage from '@/features/studentDashboard/components/ChangePassword'
 import React from 'react'
 
 const SecurityPage = () => {

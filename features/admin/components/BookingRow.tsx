@@ -39,7 +39,7 @@ const BookingRow = ({ session }: { session: any }) => {
         <div className="flex flex-col">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full bg-zinc-200 dark:bg-zinc-800 border border-white dark:border-zinc-700 overflow-hidden shrink-0">
-              <img src={session.student?.profileAvater} className="w-full h-full object-cover" alt="" />
+              <img src={session.student?.profileAvatar} className="w-full h-full object-cover" alt="" />
             </div>
             <span className="text-sm font-bold text-zinc-700 dark:text-zinc-300">
               {session.student?.name}

@@ -29,7 +29,7 @@ const LatestUsersWidget = async() => {
                    width={44}
                    height={44}
                    className="rounded-2xl object-cover"
-                   src={user.profileAvater?.length > 0 ? user.profileAvater :  "https://img.freepik.com/free-vector/user-circles-set_78370-4704.jpg?semt=ais_hybrid&w=740&q=80"}
+                   src={user.profileAvatar?.length > 0 ? user.profileAvatar :  "https://img.freepik.com/free-vector/user-circles-set_78370-4704.jpg?semt=ais_hybrid&w=740&q=80"}
                    alt={user.name}
                    />
                     <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-emerald-500 border-2 border-white dark:border-zinc-950 rounded-full" />
