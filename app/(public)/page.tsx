@@ -34,7 +34,7 @@ const LandingPage = () => {
                 Connect with <span className="text-indigo-600">Expert</span> Tutors.
                 </h1>
                 <p className="text-lg sm:text-xl text-muted-foreground font-medium max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                Unlock your potential with 1-on-1 personalized sessions. Browse top-rated experts in coding, music, languages, and more.
+                Unlock your potential with 1-on-1 personalized sessions with top-rated experts across academics, languages, and professional skills
                 </p>
             
                 <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto lg:mx-0">
@@ -45,9 +45,8 @@ const LandingPage = () => {
                 </Link>
                 </Button>
                 </div>
-            </motion.div>
-
-            {/* Hero Visual */}
+                </motion.div>
+                    
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -62,7 +61,8 @@ const LandingPage = () => {
                 <div className="absolute bottom-6 left-6 right-6 bg-card/90 backdrop-blur p-6 rounded-[32px] flex items-center justify-between shadow-xl">
                     <div>
                     <p className="text-muted-foreground font-bold text-xs uppercase tracking-widest">Live Now</p>
-                    <p className="font-black text-xl">Advanced React UI</p>
+                    <p className="font-black text-xl">Advanced Mathematics</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">with Dr. Arjun Mehta</p>
                     </div>
                     <div className="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white">
                     <Video size={20} />

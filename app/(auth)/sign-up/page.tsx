@@ -40,7 +40,7 @@ export default function SignUpPage() {
                 </div>
                 <div>
                     <p className="text-white font-bold">Alex Rivera</p>
-                    <p className="text-zinc-500 text-sm font-medium">Senior Developer @ Vercel</p>
+                    <p className="text-zinc-500 text-sm font-medium">Senior Tutor @ Professor</p>
                 </div>
                 </div>
             </div>
